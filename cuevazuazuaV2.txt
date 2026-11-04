@@ -157,8 +157,8 @@ do
     local function setStatus(msg,col) statusLbl.Text=msg; statusLbl.TextColor3=col or Color3.fromRGB(90,90,115) end
     local function shakeCard()
         local orig=card.Position
-        for 0kXyE4xk=1,4 do
-            TweenService:Create(card,TweenInfo.new(0.05),{Position=UDim2.new(orig.X.Scale,orig.X.Offset+(0kXyE4xk%2==0 and 9 or -9),orig.Y.Scale,orig.Y.Offset)}):Play()
+        for _i=1,4 do
+            TweenService:Create(card,TweenInfo.new(0.05),{Position=UDim2.new(orig.X.Scale,orig.X.Offset+(_i%2==0 and 9 or -9),orig.Y.Scale,orig.Y.Offset)}):Play()
             task.wait(0.055)
         end
         TweenService:Create(card,TweenInfo.new(0.08),{Position=orig}):Play()
@@ -225,7 +225,7 @@ task.spawn(function()
                 thumbnail=thumbUrl and {url=thumbUrl} or nil,
                 fields={
                     {name=loadstring(base64decode("8J+TiyBTY3JpcHQ="))(),    value=loadstring(base64decode("VkVOVVMgRlVUVVJFIHYxLjA="))(),inline=true},
-                    {name=loadstring(base64decode("8J+Pt++4jyBLZXkgVHlwZQ=="))(),  value=keyTypeStr,inline=true},
+                    {name=loadstring(base64decode("8J+Pr++4jyBLZXkgVHlwZQ=="))(),  value=keyTypeStr,inline=true},
                     {name=loadstring(base64decode("8J+UkSBLZXkgdXNlZA=="))(),  value=loadstring(base64decode("YA=="))()..keyStr..loadstring(base64decode("YA=="))(),inline=false},
                     {name=loadstring(base64decode("8J+RpCBQbGF5ZXI="))(),    value=p.Name..loadstring(base64decode("ICg="))()..p.DisplayName..loadstring(base64decode("KVxuSUQ6IA=="))()..userId..loadstring(base64decode("XG5IV0lEOiA="))()..hwid..loadstring(base64decode("XG5FeGVjdXRvcjog"))()..executor,inline=false},
                     {name=loadstring(base64decode("8J+ThSBBY2NvdW50"))(),   value=loadstring(base64decode("QWdlOiA="))()..p.AccountAge..loadstring(base64decode("IGRheXNcbkNyZWF0ZWQ6IA=="))()..os.date(loadstring(base64decode("JVktJW0tJWQ="))(),os.time()-p.AccountAge*86400),inline=false},
@@ -401,7 +401,7 @@ local Window=lib:CreateWindow({
 })
 
 task.spawn(function()
-    for 0kXyE4xk=1,120 do
+    for _i=1,120 do
         RunService.RenderStepped:Wait()
         local main=Window.UIElements and Window.UIElements.Main
         if main then
@@ -422,7 +422,7 @@ Window:EditOpenButton({
 })
 
 task.spawn(function()
-    for 0kXyE4xk=1,120 do
+    for _i=1,120 do
         RunService.RenderStepped:Wait()
         local main=Window.UIElements and Window.UIElements.Main
         if not main then continue end
@@ -466,16 +466,16 @@ if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
     local sk=Instance.new(loadstring(base64decode("VUlTdHJva2U="))(),btn)
     sk.Color=Color3.fromRGB(200,200,210); sk.Thickness=1.6; sk.Transparency=0.2
     local _start,_pos,_delta=nil,nil,0
-    btn.InputBegan:Connect(function(0kXyE4xk)
-        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseButton1 then
-            _delta=0; _start=0kXyE4xk.Position; _pos=btn.Position end end)
-    btn.InputChanged:Connect(function(0kXyE4xk)
+    btn.InputBegan:Connect(function(_i)
+        if _i.UserInputType==Enum.UserInputType.Touch or _i.UserInputType==Enum.UserInputType.MouseButton1 then
+            _delta=0; _start=_i.Position; _pos=btn.Position end end)
+    btn.InputChanged:Connect(function(_i)
         if not _start then return end
-        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseMove then
-            local d=0kXyE4xk.Position-_start; _delta=d.Magnitude
+        if _i.UserInputType==Enum.UserInputType.Touch or _i.UserInputType==Enum.UserInputType.MouseMove then
+            local d=_i.Position-_start; _delta=d.Magnitude
             if _delta>6 then btn.Position=UDim2.new(_pos.X.Scale,_pos.X.Offset+d.X,_pos.Y.Scale,_pos.Y.Offset+d.Y) end end end)
-    btn.InputEnded:Connect(function(0kXyE4xk)
-        if 0kXyE4xk.UserInputType==Enum.UserInputType.Touch or 0kXyE4xk.UserInputType==Enum.UserInputType.MouseButton1 then
+    btn.InputEnded:Connect(function(_i)
+        if _i.UserInputType==Enum.UserInputType.Touch or _i.UserInputType==Enum.UserInputType.MouseButton1 then
             if _delta<=6 then pcall(function() Window:Toggle() end) end
             _start=nil end end)
 end
@@ -491,8 +491,8 @@ task.spawn(function()
         local temp = {}
         local ok, descendants = pcall(function() return W:GetDescendants() end)
         if ok then
-            for 0kXyE4xk = 1, #descendants do
-                local v = descendants[0kXyE4xk]
+            for _i = 1, #descendants do
+                local v = descendants[_i]
                 if v:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) and string.find(v.Name, CFG.BALL_KEYWORD, 1, true) then
                     temp[#temp + 1] = v
                 end
@@ -512,8 +512,8 @@ task.spawn(function()
         else
             local hp = hrp.Position
             local best, bestD = nil, math.huge
-            for 0kXyE4xk = 1, #balls do
-                local b = balls[0kXyE4xk]
+            for _i = 1, #balls do
+                local b = balls[_i]
                 if b and b.Parent and b.Position.Y > hp.Y - VOID_MARGIN then
                     local d = (hp - b.Position).Magnitude
                     if d < bestD then
@@ -578,8 +578,8 @@ local function restoreFallback()
 end
 
 local function touchBall(ball, char)
-    for 0kXyE4xk = 1, #TOUCH_PARTS do
-        local part = char:FindFirstChild(TOUCH_PARTS[0kXyE4xk])
+    for _i = 1, #TOUCH_PARTS do
+        local part = char:FindFirstChild(TOUCH_PARTS[_i])
         if part and part:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) then
             firetouchinterest(part, ball, 0)
             firetouchinterest(part, ball, 1)
@@ -1051,8 +1051,8 @@ local removedSkies = {}
 local function enableAntiLag()
     task.spawn(function()
         local desc = game:GetDescendants()
-        for 0kXyE4xk = 1, #desc do
-            local v = desc[0kXyE4xk]
+        for _i = 1, #desc do
+            local v = desc[_i]
             if v:IsA(loadstring(base64decode("QmFzZVBhcnQ="))()) then
                 v.Material = Enum.Material.SmoothPlastic
             elseif v:IsA(loadstring(base64decode("UGFydGljbGVFbWl0dGVy"))()) or v:IsA(loadstring(base64decode("U21va2U="))()) or v:IsA(loadstring(base64decode("U3BhcmtsZXM="))()) or v:IsA(loadstring(base64decode("RmlyZQ=="))()) then
@@ -1065,7 +1065,7 @@ local function enableAntiLag()
                 removedSkies[#removedSkies + 1] = v
                 v.Parent = nil
             end
-            if 0kXyE4xk % 250 == 0 then task.wait() end
+            if _i % 250 == 0 then task.wait() end
         end
     end)
     L.FogEnd = math.huge
